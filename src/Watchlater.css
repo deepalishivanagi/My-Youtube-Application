@@ -1,0 +1,12 @@
+.Watchlater-flex-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 11rem;
+    margin-left: 14rem;
+}
+
+.Watchlater-main-container {
+    display: flex;
+}

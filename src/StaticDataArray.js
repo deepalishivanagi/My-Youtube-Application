@@ -1,0 +1,95 @@
+export const StaticDataArray=[
+
+    {src:"https://www.youtube.com/embed/iLWTnMzWtj4",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"How JavaScript Code is executed? ❤️& Call Stack | Namaste JavaScript Ep. 2",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:1
+    },
+    {src:"https://www.youtube.com/embed/fYq5PXgSsbE",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Learn Flexbox in 15 Minutes",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:2
+    },
+    {src:"https://www.youtube.com/embed/CYYtLXfquy0",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"AVATAR 2 THE WAY OF WATER Trailer (4K ULTRA HD) 2022",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:3
+    },
+    {src:"https://www.youtube.com/embed/6oAdJjzXQS8",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Relaxing Piano Music & Water Sounds 24/7 - Ideal for Stress Relief and Healing",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:4
+    },
+    {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Learn React In 30 Minutes",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:5
+    },
+    {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Learn React In 30 Minutes",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:5
+    },
+    {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Learn React In 30 Minutes",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:5
+    },
+    {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Learn React In 30 Minutes",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:5
+    },
+    {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Learn React In 30 Minutes",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:5
+    },
+    {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Learn React In 30 Minutes",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:5
+    },
+    {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Learn React In 30 Minutes",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:5
+    },
+    {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Learn React In 30 Minutes",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:5
+    },
+    {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
+    imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
+    title:"YouTube video player",
+    name:"Learn React In 30 Minutes",
+    desc:"Understand how the code is executed in JavaScript. How an Execution Context is created and how the Call Stack works. Behind the scenes, there are a lot of things happening in JS Engine when the code is executed. All core fundamentals are covered in this video with examples.",
+    id:5
+    }
+    
+]

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import './App.css';
+import Explore from './Explore';
+import VideoContainer from './VideoContainer';
+import { StaticDataArray } from './StaticDataArray';
+import {Routes,Route,Link} from 'react-router-dom';
+import MyChannel from './Images/MyChannel.png';
+import Liked from './Liked';
+import Watchlater from './Watchlater';
+import Playlist from './Playlist';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+      {/* <h1>Hello App</h1> */}
+      <nav>
+        <div><img src={MyChannel} id="logo"></img></div>
+        <div><Link to="/Explore" id='explore'> Explore</Link></div>
+      </nav>
+      <hr></hr>
+      <Routes>
+        <Route path="/Explore" element={<Explore/>}/>
+        <Route path='/VideoContainer/:item_id' element={<VideoContainer/>} />  
+        <Route path='/Liked' element={<Liked/>} /> 
+        <Route path='/Watchlater' element={<Watchlater/>} /> 
+        <Route path='/Playlist' element={<Playlist/>} /> 
+      </Routes>
     </div>
   );
 }
