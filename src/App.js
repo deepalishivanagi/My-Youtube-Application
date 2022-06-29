@@ -18,16 +18,18 @@ function App() {
       {/* <h1>Hello App</h1> */}
       <nav>
         <div><img src={MyChannel} id="logo"></img></div>
-        <div><Link to="/Explore" id='explore'> Explore</Link></div>
+        {/* <div><Link to="/Explore" id='explore'> Explore</Link></div> */}
       </nav>
       <hr></hr>
       <Routes>
+     
         <Route path="/Explore" element={<Explore/>}/>
         <Route path='/VideoContainer/:item_id' element={<VideoContainer/>} />  
         <Route path='/Liked' element={<Liked/>} /> 
         <Route path='/Watchlater' element={<Watchlater/>} /> 
         <Route path='/Playlist' element={<Playlist/>} /> 
         <Route path='/PlaylistFile/:file' element={<PlaylistFile/>}/>
+        <Route path="*" element={<Explore/>}/>
       </Routes>
     </div>
   );
