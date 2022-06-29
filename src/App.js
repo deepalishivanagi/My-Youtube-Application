@@ -8,6 +8,7 @@ import MyChannel from './Images/MyChannel.png';
 import Liked from './Liked';
 import Watchlater from './Watchlater';
 import Playlist from './Playlist';
+import PlaylistFile from './PlaylistFile';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/Liked' element={<Liked/>} /> 
         <Route path='/Watchlater' element={<Watchlater/>} /> 
         <Route path='/Playlist' element={<Playlist/>} /> 
+        <Route path='/PlaylistFile/:file' element={<PlaylistFile/>}/>
       </Routes>
     </div>
   );

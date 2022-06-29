@@ -8,11 +8,47 @@ export const FilterProvider=(props)=>{
 
     const [ShowArray,setShowArray]=useState(StaticDataArray);
     const [isOpen, setIsOpen] = useState(false);
-    const [PlaylistObject,setPlaylist]=useState({"One":[1,2],"two":[3,4]})
+    const [PlaylistObject,setPlaylist]=useState({One:[1],two:[2]})
 
     function TogglePopup(){
         setIsOpen(!isOpen);
         return;
+    }
+
+    function addToPlaylist(file,Videoid){
+
+        var temp=JSON.parse(JSON.stringify(PlaylistObject));
+        if(file in temp)
+        {
+            if(!(temp[file].includes(Videoid)))
+            {
+                temp[file]=[...temp[file],Videoid];
+            }
+            
+        }
+        else
+        {
+            temp[file]=[Videoid];
+        }
+        setPlaylist(temp);
+        console.log(PlaylistObject);
+
+    }
+
+    function DeletelPlaylistFile(file){
+        var temp=JSON.parse(JSON.stringify(PlaylistObject));
+        delete temp[file];
+        setPlaylist(temp);
+    }
+
+    function DeleteVideoFromPlaylist(id,key){
+        var temp=JSON.parse(JSON.stringify(PlaylistObject));
+        var filterValue=PlaylistObject[key].filter((item)=>{
+            return (item!=id);
+        })
+        temp[key]=filterValue;
+        setPlaylist(temp);
+
     }
 
     function LikedVideoHandler(Videoid){
@@ -120,7 +156,7 @@ export const FilterProvider=(props)=>{
 
     return(
         <FilterContext.Provider value={{LikedVideoHandler,ShowArray,DeletelikeHandler,DisLikedVideoHandler,WatchlaterHandler,DeletelFromWatchlater,
-            TogglePopup,isOpen,PlaylistObject}}>
+            TogglePopup,isOpen,PlaylistObject,addToPlaylist,DeletelPlaylistFile,DeleteVideoFromPlaylist}}>
         {props.children}
         </FilterContext.Provider>
     )

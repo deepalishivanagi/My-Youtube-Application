@@ -18,7 +18,7 @@ export default function VideoContainer(){
     const {item_id} = useParams();
     var ShowVideo =[];
     const {LikedVideoHandler,ShowArray,DisLikedVideoHandler,WatchlaterHandler,
-        TogglePopup,isOpen,PlaylistObject} =useContext(FilterContext);
+        TogglePopup,isOpen,PlaylistObject,addToPlaylist} =useContext(FilterContext);
 
     for(let i=0;i<ShowArray.length;i++)
     {
@@ -44,6 +44,8 @@ export default function VideoContainer(){
                 <p>{ShowVideo[0].desc}</p>
                 { isOpen && <Popup 
                     PlaylistObject={PlaylistObject}
+                    addToPlaylist={addToPlaylist}
+                    Videoid={ShowVideo[0].id}
                     // content={<>
                     //     <p>Create a Playlist</p>
                     //     <button>Create</button>

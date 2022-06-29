@@ -1,13 +1,33 @@
+import { useContext } from 'react';
+import { FilterContext } from './FilterProvider';
+import { Link } from 'react-router-dom';
 import './Playlist.css';
 import Sidebar from './Sidebar';
 
 export default function Playist(){
 
+    const{PlaylistObject,DeletelPlaylistFile}=useContext(FilterContext);
+    var PlaylistArray=Object.keys(PlaylistObject);
+
     return(
         <div className="Playlist-main-container">
              <Sidebar/>
-                <div className="Playlist-flex-container">
-                     <h1>inside Playist component</h1>
+             <div>
+                    <h1 id='Playlist-heading'>Videos added to watchlater</h1>
+                        <div className="Playlist-flex-container">    
+                            {PlaylistArray.map((item)=>{ 
+                                    return(
+                                        <div>
+                                            <Link to={`/PlaylistFile/${item}`}>
+                                                <div >
+                                                    <h1>{item}</h1>    
+                                                </div>                    
+                                            </Link>
+                                            <button onClick={()=>{DeletelPlaylistFile(item)}}>delete</button>
+                                        </div>
+                                    )})
+                                 }
+                        </div>
                 </div>
         </div>
     );

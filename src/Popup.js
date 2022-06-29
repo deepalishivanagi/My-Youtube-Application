@@ -12,7 +12,7 @@ export default function Popup(props)
                 <h1>Add to Playlist</h1>
                     <>
                         <p>Create a Playlist</p>
-                        {PlaylistFiles.map((item)=>{return (<div>{item}</div>)})}
+                        {PlaylistFiles.map((item)=>{return (<div onClick={()=>{props.addToPlaylist(item,props.Videoid)}}>{item}</div>)})}
                         <button>Create</button>
                     </>
                
