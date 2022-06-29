@@ -7,14 +7,14 @@ import Sidebar from './Sidebar';
 
 export default function Liked(){
 
-    const {LikedList,DeletelikeHandler} =useContext(FilterContext)
+    const {ShowArray,DeletelikeHandler} =useContext(FilterContext)
     var ShowLikedVideos = [];
 
-    for(let i=0;i<LikedList.length;i++)
+    for(let i=0;i<ShowArray.length;i++)
     {
-        if(LikedList[i].like==1)
+        if(ShowArray[i].like==1)
         {
-            ShowLikedVideos.push(LikedList[i]);
+            ShowLikedVideos.push(ShowArray[i]);
         }
     }
    

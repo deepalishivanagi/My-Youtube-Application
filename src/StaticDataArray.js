@@ -9,7 +9,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/fYq5PXgSsbE",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -20,7 +20,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/CYYtLXfquy0",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -31,7 +31,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/6oAdJjzXQS8",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -42,7 +42,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -53,7 +53,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -64,7 +64,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -75,7 +75,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -86,7 +86,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -97,7 +97,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -108,7 +108,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -119,7 +119,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -130,7 +130,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     },
     {src:"https://www.youtube.com/embed/hQAHSlTtcmY",
     imgsrc:"https://filmfare.wwmindia.com/content/2022/apr/avatar241651147935.jpg",
@@ -141,7 +141,7 @@ export const StaticDataArray=[
     like:0,
     dislike:0,
     Playlist:0,
-    Watchlater:0
+    watchlater:0
     }
     
 ]

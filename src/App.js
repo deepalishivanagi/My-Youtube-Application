@@ -3,7 +3,6 @@ import React from 'react';
 import './App.css';
 import Explore from './Explore';
 import VideoContainer from './VideoContainer';
-import { StaticDataArray } from './StaticDataArray';
 import {Routes,Route,Link} from 'react-router-dom';
 import MyChannel from './Images/MyChannel.png';
 import Liked from './Liked';
@@ -11,7 +10,7 @@ import Watchlater from './Watchlater';
 import Playlist from './Playlist';
 
 function App() {
-  
+
   return (
     <div className="App">
      

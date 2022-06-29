@@ -1,106 +1,126 @@
 import { createContext, useState } from "react";
 import { StaticDataArray } from "./StaticDataArray";
-import watch_later from "./Images/watch_later.png";
-import Playlist from "./Images/Playlist.png";
 
 
 export const FilterContext = createContext();
 
 export const FilterProvider=(props)=>{
 
-    const [LikedList,setLikedList]=useState(StaticDataArray);
-    const [disliketoggle,setdisliketoggle]=useState(0);
-    const [liketoggle,setliketoggle]=useState(0);
+    const [ShowArray,setShowArray]=useState(StaticDataArray);
+    const [isOpen, setIsOpen] = useState(false);
+    const [PlaylistObject,setPlaylist]=useState({"One":[1,2],"two":[3,4]})
 
+    function TogglePopup(){
+        setIsOpen(!isOpen);
+        return;
+    }
 
     function LikedVideoHandler(Videoid){
 
-        var temp=JSON.parse(JSON.stringify(LikedList));
-        var count = liketoggle+1;
-        if(count%2!=0)
-        {
-            for(let i=0;i<StaticDataArray.length;i++)
+        var temp=JSON.parse(JSON.stringify(ShowArray));
+      
+            for(let i=0;i<ShowArray.length;i++)
             {
-                if(StaticDataArray[i].id==Videoid)
+                if(ShowArray[i].id==Videoid)
                 {
-                    temp[i].like=1;
-                    temp[i].dislike=0;
+                    if(ShowArray[i].like==1)
+                    {
+                        temp[i].like=0;
+                    }
+                    else
+                    {
+                        temp[i].like=1;
+                        temp[i].dislike=0;
+                    }
+                  
                 }
             }
-            setLikedList(temp);
-            setliketoggle(count);
+            setShowArray(temp);
             return;
-        }
-        else
-        {
-            for(let i=0;i<StaticDataArray.length;i++)
-            {
-                if(StaticDataArray[i].id==Videoid)
-                {
-                    temp[i].like=0;
-                }
-            }
-            setLikedList(temp);
-            setliketoggle(count);
-            return;
-
-        }
+    
     }
 
     function DeletelikeHandler(id){
-        var templist=JSON.parse(JSON.stringify(LikedList));
+        var templist=JSON.parse(JSON.stringify(ShowArray));
 
-        for(let i=0;i<StaticDataArray.length;i++)
+        for(let i=0;i<ShowArray.length;i++)
         {
-            if(StaticDataArray[i].id==id)
+            if(ShowArray[i].id==id)
             {
                 templist[i].like=0;
             }
         }
-        setLikedList(templist);
+        setShowArray(templist);
         return;
     }
 
-    function DisLikedVideoHandler(id){
-        var temp=JSON.parse(JSON.stringify(LikedList));
-        var count = disliketoggle+1;
-        if(count%2!=0)
-        {
-            for(let i=0;i<StaticDataArray.length;i++)
+    function DisLikedVideoHandler(id)
+    {
+        var temp=JSON.parse(JSON.stringify(ShowArray));
+    
+            for(let i=0;i<ShowArray.length;i++)
             {
-                if(StaticDataArray[i].id==id)
+                if(ShowArray[i].id==id)
                 {
-                    temp[i].dislike=1;
-                    temp[i].like=0;
+                    if(ShowArray[i].dislike==1)
+                    {
+                        temp[i].dislike=0;
+                    }
+                    else
+                    {
+                        temp[i].dislike=1;
+                        temp[i].like=0;
+                        
+                    }
+                   
                 }
-            }
-         
-            setLikedList(temp);
-            setdisliketoggle(count);
-            return;
-        }
-        else
-        {
-            for(let i=0;i<StaticDataArray.length;i++)
+            }         
+            setShowArray(temp);
+          
+         return;
+    }
+
+    function WatchlaterHandler(id){
+        var temp=JSON.parse(JSON.stringify(ShowArray));
+    
+            for(let i=0;i<ShowArray.length;i++)
             {
-                if(StaticDataArray[i].id==id)
+                if(ShowArray[i].id==id)
                 {
-                    temp[i].dislike=0;
+                    if(ShowArray[i].watchlater==1)
+                    {
+                        temp[i].watchlater=0;
+                    }
+                    else
+                    {
+                        temp[i].watchlater=1;    
+                    }
+                   
                 }
+            }         
+            setShowArray(temp);
+          
+         return;
+    }
+
+    function DeletelFromWatchlater(id){
+        var templist=JSON.parse(JSON.stringify(ShowArray));
+
+        for(let i=0;i<ShowArray.length;i++)
+        {
+            if(ShowArray[i].id==id)
+            {
+                templist[i].watchlater=0;
             }
-         
-            setLikedList(temp);
-            setdisliketoggle(count);
-            return;
-
         }
-     
-
+        setShowArray(templist);
+        return;
     }
 
 
     return(
-        <FilterContext.Provider value={{LikedVideoHandler,LikedList,DeletelikeHandler,DisLikedVideoHandler}}>
+        <FilterContext.Provider value={{LikedVideoHandler,ShowArray,DeletelikeHandler,DisLikedVideoHandler,WatchlaterHandler,DeletelFromWatchlater,
+            TogglePopup,isOpen,PlaylistObject}}>
         {props.children}
         </FilterContext.Provider>
     )
