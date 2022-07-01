@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Liked.css';
 import Sidebar from './Sidebar';
 import { ToastContainer } from 'react-toastify';
+import Card from './card.js';
 
 
 export default function Liked(){
@@ -30,9 +31,10 @@ export default function Liked(){
                                     return(
                                         <div>
                                             <Link to={`/VideoContainer/${item.id}`}>
-                                                <div >
+                                                {/* <div >
                                                     <img src={item.imgsrc} id="SingleVideo" ></img>    
-                                                </div>                    
+                                                </div>    */}
+                                                <Card item={item}/>                  
                                             </Link>
                                             <button onClick={()=>{DeletelikeHandler(item.id)}}>delete</button>
                                         </div>

@@ -18,6 +18,8 @@
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
   }
   
   .card button:hover {
@@ -31,5 +33,6 @@
 
   #SingleVideo {
     width: 98%;
-   
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }

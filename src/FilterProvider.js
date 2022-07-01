@@ -23,28 +23,67 @@ export const FilterProvider=(props)=>{
     function addToPlaylist(file,Videoid){
 
         var temp=JSON.parse(JSON.stringify(PlaylistObject));
-        notify();
-        function notify()
-        {
-             
-             toast('Successfully added to playlist!!');
-             return;
-         }
+        var notifyShow="";
      
         if(file in temp)
         {
             if(!(temp[file].includes(Videoid)))
             {
                 temp[file]=[...temp[file],Videoid];
+                notifyShow ="Successfully added to playlist!!";
+            }
+            else
+            {
+                notifyShow ="Video already exists in playlist!!";
             }
             
         }
         else
         {
             temp[file]=[Videoid];
+            notifyShow ="Successfully added to playlist!!";
         }
         setPlaylist(temp);
         console.log(PlaylistObject);
+        notify();
+        function notify()
+        {
+             
+             toast(notifyShow);
+             return;
+         }
+
+    }
+
+    function AddNewPlaylistHandler(fileName){
+        var temp=JSON.parse(JSON.stringify(PlaylistObject));
+        var notifyShow="";
+        if(fileName==null||fileName==undefined||fileName=="")
+        {
+            notifyShow =" Please enter playlist name.";
+        }
+        else if(fileName in temp)
+        {
+           
+            notifyShow =" Playlist already exists with this name!!";
+            
+        }
+        else
+        {
+            temp[fileName]=[];
+            notifyShow ="New playlist created successfully!!";
+        }
+        setPlaylist(temp);
+        console.log(PlaylistObject);
+        notify();
+        function notify()
+        {
+             
+             toast(notifyShow);
+             return;
+         }
+
+
 
     }
 
@@ -246,7 +285,7 @@ export const FilterProvider=(props)=>{
 
     return(
         <FilterContext.Provider value={{LikedVideoHandler,ShowArray,DeletelikeHandler,DisLikedVideoHandler,WatchlaterHandler,DeletelFromWatchlater,
-            TogglePopup,isOpen,PlaylistObject,addToPlaylist,DeletePlaylistFile,DeleteVideoFromPlaylist}}>
+            TogglePopup,isOpen,PlaylistObject,addToPlaylist,DeletePlaylistFile,DeleteVideoFromPlaylist,AddNewPlaylistHandler}}>
         {props.children}
         </FilterContext.Provider>
     )
