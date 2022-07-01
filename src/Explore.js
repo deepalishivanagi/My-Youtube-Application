@@ -3,6 +3,7 @@ import './Explore.css';
 import Sidebar from "./Sidebar";
 import { useContext } from "react";
 import { FilterContext } from "./FilterProvider";
+import Card from "./card";
 
 export default function Explore(){
 
@@ -15,9 +16,7 @@ export default function Explore(){
                     {ShowArray.map((item)=>{ 
                             return(
                                 <Link to={`/VideoContainer/${item.id}`}>
-                                    <div >
-                                        <img src={item.imgsrc} id="SingleVideo" ></img>
-                                    </div>                    
+                                    <Card item={item}/>                 
                                 </Link>
                             )})
                         }

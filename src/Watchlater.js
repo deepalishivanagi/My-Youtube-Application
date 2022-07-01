@@ -3,6 +3,7 @@ import Sidebar from './Sidebar';
 import { useContext } from 'react';
 import { FilterContext } from './FilterProvider';
 import { Link } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 export default function Watchlater(){
 
@@ -37,6 +38,7 @@ export default function Watchlater(){
                                  }
                         </div>
                 </div>
+                <ToastContainer />
         </div>
     );
 }

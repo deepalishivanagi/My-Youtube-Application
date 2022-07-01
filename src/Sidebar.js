@@ -9,7 +9,7 @@ export default function Sidebar(){
             <Link to={`/Explore`}><div>Dashboard</div></Link>
             <Link to={`/Liked`}><div>Liked</div></Link>
             <Link to={`/Watchlater`}><div>Watch later</div></Link>
-            <Link to={`/Playlist`}><div>Playist</div></Link>
+            <Link to={`/Playlist`}><div>Playlist</div></Link>
         </div>
     )
 }

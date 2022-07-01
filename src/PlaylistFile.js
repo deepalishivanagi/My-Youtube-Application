@@ -3,6 +3,7 @@ import { FilterContext } from './FilterProvider';
 import { Link, useParams } from 'react-router-dom';
 import './PlaylistFile.css';
 import Sidebar from './Sidebar';
+import { ToastContainer } from 'react-toastify';
 
 export default function Playist(){
 
@@ -39,6 +40,7 @@ export default function Playist(){
                                 }
                         </div>
                 </div>
+                <ToastContainer />
         </div>
     );
 }

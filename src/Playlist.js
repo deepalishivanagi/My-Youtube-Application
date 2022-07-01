@@ -3,10 +3,11 @@ import { FilterContext } from './FilterProvider';
 import { Link } from 'react-router-dom';
 import './Playlist.css';
 import Sidebar from './Sidebar';
+import { ToastContainer } from 'react-toastify';
 
 export default function Playist(){
 
-    const{PlaylistObject,DeletelPlaylistFile}=useContext(FilterContext);
+    const{PlaylistObject,DeletePlaylistFile}=useContext(FilterContext);
     var PlaylistArray=Object.keys(PlaylistObject);
 
     return(
@@ -23,12 +24,13 @@ export default function Playist(){
                                                     <h1>{item}</h1>    
                                                 </div>                    
                                             </Link>
-                                            <button onClick={()=>{DeletelPlaylistFile(item)}}>delete</button>
+                                            <button onClick={()=>{DeletePlaylistFile(item)}}>delete</button>
                                         </div>
                                     )})
                                  }
                         </div>
                 </div>
+                <ToastContainer />
         </div>
     );
 }

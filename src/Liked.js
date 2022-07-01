@@ -3,6 +3,7 @@ import { FilterContext } from './FilterProvider';
 import { Link } from 'react-router-dom';
 import './Liked.css';
 import Sidebar from './Sidebar';
+import { ToastContainer } from 'react-toastify';
 
 
 export default function Liked(){
@@ -39,6 +40,7 @@ export default function Liked(){
                                 }
                         </div>
                 </div>
+                <ToastContainer />
         </div>
     );
 }

@@ -12,6 +12,7 @@ import Playlist from "./Images/Playlist.png";
 import { useContext } from "react";
 import { FilterContext } from "./FilterProvider";
 import Popup from "./Popup";
+import { ToastContainer } from "react-toastify";
 
 export default function VideoContainer(){
 
@@ -52,6 +53,8 @@ export default function VideoContainer(){
                     //     </>}
                         handleClose={TogglePopup}
                 />}
+
+                <ToastContainer />
             </div>
         </div>
     )
