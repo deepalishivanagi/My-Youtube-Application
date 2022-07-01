@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import './PlaylistFile.css';
 import Sidebar from './Sidebar';
 import { ToastContainer } from 'react-toastify';
+import Card from './card';
 
 export default function Playist(){
 
@@ -30,9 +31,7 @@ export default function Playist(){
                                     return(
                                         <div>
                                             <Link to={`/VideoContainer/${item.id}`}>
-                                                <div >
-                                                    <img src={item.imgsrc} id="SingleVideo" ></img>    
-                                                </div>                    
+                                                 <Card item={item}/>                     
                                             </Link>
                                             <button onClick={()=>{DeleteVideoFromPlaylist(item.id,file)}}>delete</button>
                                         </div>

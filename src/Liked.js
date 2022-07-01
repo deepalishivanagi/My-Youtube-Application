@@ -31,9 +31,6 @@ export default function Liked(){
                                     return(
                                         <div>
                                             <Link to={`/VideoContainer/${item.id}`}>
-                                                {/* <div >
-                                                    <img src={item.imgsrc} id="SingleVideo" ></img>    
-                                                </div>    */}
                                                 <Card item={item}/>                  
                                             </Link>
                                             <button onClick={()=>{DeletelikeHandler(item.id)}}>delete</button>

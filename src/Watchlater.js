@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { FilterContext } from './FilterProvider';
 import { Link } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import Card from './card';
 
 export default function Watchlater(){
 
@@ -28,9 +29,7 @@ export default function Watchlater(){
                                     return(
                                         <div>
                                             <Link to={`/VideoContainer/${item.id}`}>
-                                                <div >
-                                                    <img src={item.imgsrc} id="SingleVideo" ></img>    
-                                                </div>                    
+                                                <Card item={item}/>                    
                                             </Link>
                                             <button onClick={()=>{DeletelFromWatchlater(item.id)}}>delete</button>
                                         </div>
