@@ -4,17 +4,14 @@ import React from "react";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-
 export const FilterContext = createContext();
-
 
 export const FilterProvider=(props)=>{
 
     const [ShowArray,setShowArray]=useState(StaticDataArray);
     const [isOpen, setIsOpen] = useState(false);
     const [PlaylistObject,setPlaylist]=useState({One:[1],two:[2]})
-
-    
+ 
     function TogglePopup(){
         setIsOpen(!isOpen);
         return;
@@ -23,100 +20,66 @@ export const FilterProvider=(props)=>{
     function addToPlaylist(file,Videoid){
 
         var temp=JSON.parse(JSON.stringify(PlaylistObject));
-        var notifyShow="";
      
         if(file in temp)
         {
             if(!(temp[file].includes(Videoid)))
             {
                 temp[file]=[...temp[file],Videoid];
-                notifyShow ="Successfully added to playlist!!";
+                toast("Successfully added to playlist!!");
             }
             else
             {
-                notifyShow ="Video already exists in playlist!!";
+                toast("Video already exists in playlist!!");
             }
             
         }
         else
         {
             temp[file]=[Videoid];
-            notifyShow ="Successfully added to playlist!!";
+            toast("Successfully added to playlist!!");
         }
         setPlaylist(temp);
-        console.log(PlaylistObject);
-        notify();
-        function notify()
-        {
-             
-             toast(notifyShow);
-             return;
-         }
-
     }
 
     function AddNewPlaylistHandler(fileName){
         var temp=JSON.parse(JSON.stringify(PlaylistObject));
-        var notifyShow="";
+
         if(fileName==null||fileName==undefined||fileName=="")
         {
-            notifyShow =" Please enter playlist name.";
+            toast("Please enter playlist name.");
         }
         else if(fileName in temp)
         {
            
-            notifyShow =" Playlist already exists with this name!!";
+            toast("Playlist already exists with this name!!");
             
         }
         else
         {
             temp[fileName]=[];
-            notifyShow ="New playlist created successfully!!";
+            toast("New playlist created successfully!!");
         }
         setPlaylist(temp);
-        console.log(PlaylistObject);
-        notify();
-        function notify()
-        {
-             
-             toast(notifyShow);
-             return;
-         }
-
-
 
     }
 
     function DeletePlaylistFile(file){
         var temp=JSON.parse(JSON.stringify(PlaylistObject));
-        notify();
-        function notify()
-        {
-             
-             toast('Playlist deleted!!');
-             return;
-         }
-     
+
+        toast("Playlist deleted!!");
         delete temp[file];
         setPlaylist(temp);
     }
 
     function DeleteVideoFromPlaylist(id,key){
         var temp=JSON.parse(JSON.stringify(PlaylistObject));
-        notify();
-        function notify()
-        {
-             
-             toast('Video deleted from playlist!!');
-             return;
-         }
-     
+        toast("Video deleted from playlist!!");
         var filterValue=PlaylistObject[key].filter((item)=>{
             return (item!=id);
         })
         temp[key]=filterValue;
         setPlaylist(temp);
-
     }
 
     function LikedVideoHandler(Videoid){
@@ -143,28 +106,25 @@ export const FilterProvider=(props)=>{
             }
             setShowArray(temp);
 
-            notify();
-            function notify()
-               {
-                    if(temp[index].like==1)
-                    {
-                        toast('Successfully moved to liked list!!');
+            if(temp[index].like==1)
+            {
+                toast('Successfully moved to liked list!!');
                        
-                    }
-                    else{
-                        toast('Successfully removed from liked list!!');
+            }
+            else{
+                    
+                toast('Successfully removed from liked list!!');
                        
-                    }
-                    return;
-                }
-            return;
+            }
+        return;
     
     }
 
 
     function DeletelikeHandler(id){
         var templist=JSON.parse(JSON.stringify(ShowArray));
-        notify();
+        toast("Deleted video Successfully!!");
+       
         for(let i=0;i<ShowArray.length;i++)
         {
             if(ShowArray[i].id==id)
@@ -173,15 +133,9 @@ export const FilterProvider=(props)=>{
             }
         }
         setShowArray(templist);
-        function notify()
-        {
-             
-             toast('Deleted video Successfully!!');
-             return;
-         }
-     
         return;
     }
+   
 
     function DisLikedVideoHandler(id)
     {
@@ -200,16 +154,13 @@ export const FilterProvider=(props)=>{
                     else
                     {
                         temp[i].dislike=1;
-                        temp[i].like=0;
-                        
+                        temp[i].like=0;    
                     }
                    
                 }
             }         
             setShowArray(temp);
-            notify();
-            function notify()
-            {
+       
                  if(temp[index].dislike==1)
                  {
                     toast('Video disliked!!');
@@ -217,17 +168,14 @@ export const FilterProvider=(props)=>{
                  else{
                     toast('Video removed from dislike!!');
                  }
-                 return;
-             }
-          
          return;
     }
 
     function WatchlaterHandler(id){
         var temp=JSON.parse(JSON.stringify(ShowArray));
         var index;
-      
-            for(let i=0;i<ShowArray.length;i++)
+
+        for(let i=0;i<ShowArray.length;i++)
             {
                 if(ShowArray[i].id==id)
                 {
@@ -239,14 +187,10 @@ export const FilterProvider=(props)=>{
                     else
                     {
                         temp[i].watchlater=1;    
-                    }
-                   
+                    }   
                 }
             }         
             setShowArray(temp);
-            notify();
-            function notify()
-            {
                  if(temp[index].watchlater==1)
                  {
                     toast('Successfully added to watch later!!');
@@ -254,16 +198,13 @@ export const FilterProvider=(props)=>{
                  else{
                     toast('Successfully removed from watch later!!');
                  }
-                 return;
-             }
-
          return;
     }
 
     function DeletelFromWatchlater(id){
-        var templist=JSON.parse(JSON.stringify(ShowArray));    
-        notify();
-
+        var templist=JSON.parse(JSON.stringify(ShowArray));  
+        toast("Successfully deleted from watch later!!"); 
+        
         for(let i=0;i<ShowArray.length;i++)
         {
             if(ShowArray[i].id==id)
@@ -272,13 +213,6 @@ export const FilterProvider=(props)=>{
             }
         }
         setShowArray(templist);
-        function notify()
-        {
-             
-             toast('Successfully deleted from watch later!!');
-             return;
-         }
-
         return;
     }
 
