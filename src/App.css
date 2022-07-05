@@ -17,18 +17,31 @@ hr {
   list-style: none;
     display: flex;
     justify-content: space-between;
-    height: 10rem;
+    height: 9rem;
     width: 100%;
-    background-color: #0d1b2a;
+    background-color: black;
     position: fixed;
     border-bottom: 0.15rem solid;
     color: black;
 }
 
  .App nav div{
-  width: 44%;
+  /* width: 44%;
   height: 145%;
-  margin: 2rem;
+  margin: 2rem; */
+
+  width: 25%;
+  height: 94%;
+  margin: 4rem 2rem 0 2rem;
+  font-size: 2rem;
+ }
+
+ .App #dark{
+  color: #DF4500;
+ }
+ .App #light{
+  color: #3C3735;
+  font-weight: bold;
  }
 
 #logo {

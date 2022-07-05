@@ -1,12 +1,12 @@
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    box-shadow: 0px 6px 8px 7px rgb(0 0 0 / 29%);
     max-width: 300px;
-    /* max-width: 50%;
-    height: 96%; */
     margin: auto;
     text-align: center;
     font-family: arial;
     text-decoration: none;
+    border-radius: 0.5rem;
   }
   .card button {
     border: none;

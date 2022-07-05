@@ -15,7 +15,8 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <div><img src={MyChannel} id="logo"></img></div>
+        {/* <div><img src={MyChannel} id="logo"></img></div> */}
+        <div><span id="dark">Video </span><span  id="light"> PlayBook</span></div>
       </nav>
       <hr></hr>
       <Routes>

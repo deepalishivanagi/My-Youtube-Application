@@ -6,10 +6,12 @@ export default function Sidebar(){
 
     return(
         <div className="Sidebar-main-container">
-            <Link to={`/Explore`}><div>Dashboard</div></Link>
-            <Link to={`/Liked`}><div>Liked</div></Link>
-            <Link to={`/Watchlater`}><div>Watch later</div></Link>
-            <Link to={`/Playlist`}><div>Playlist</div></Link>
+            <ul class="nav-ul">
+                <li><Link to={`/Explore`} class="links">Dashboard</Link></li>
+                <li><Link to={`/Liked`} class="links">Liked</Link></li>
+                <li><Link to={`/Watchlater`} class="links">Watchlater</Link></li>
+                <li><Link to={`/Playlist`} class="links">Playlist</Link></li>
+            </ul>   
         </div>
     )
 }
