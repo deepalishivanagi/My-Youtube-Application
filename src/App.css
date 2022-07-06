@@ -34,6 +34,7 @@ hr {
   height: 94%;
   margin: 4rem 2rem 0 2rem;
   font-size: 2rem;
+  display: inline-flex;
  }
 
  .App #dark{
@@ -48,4 +49,17 @@ hr {
   float: left;
   height: 38%;
   width: 50%;
+}
+
+
+@media screen and (max-width:360px){
+  .App nav div {
+    font-size: 1.5em;  
+}
+}
+
+@media only screen and (max-width:650px) {
+  .App nav div {
+    font-size: 1.5em;  
+}
 }

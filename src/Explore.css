@@ -14,3 +14,15 @@
     background: dimgray;
 }
 
+@media screen and (max-width:360px) {
+    .Explore-flex-container {
+        margin-left: 8rem;
+        margin-right: 1rem;
+    } 
+}
+@media only screen and (max-width:650px){
+    .Explore-flex-container {
+        margin-left: 10rem;
+        margin-right: 1rem;
+    } 
+}

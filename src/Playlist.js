@@ -14,7 +14,7 @@ export default function Playist(){
         <div className="Playlist-main-container">
              <Sidebar/>
              <div>
-                    <h1 id='Playlist-heading'>Videos added to watchlater</h1>
+                    <h1 id='Playlist-heading'>Collection of Playlist</h1>
                         <div className="Playlist-flex-container">    
                             {PlaylistArray.map((item)=>{ 
                                     return(

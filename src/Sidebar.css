@@ -85,4 +85,17 @@
     left: 0;
 }
 
+@media only screen and (max-width:360px){
+    .Sidebar-main-container {
+        width: 32%;
+        font-size: 0.5em;
+    }
+    
+}
+@media only screen and (max-width:650px) {
+    .Sidebar-main-container {
+        width: 30%;
+        font-size: 0.55em;
+    }
+}
 

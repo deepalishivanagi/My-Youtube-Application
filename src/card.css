@@ -36,3 +36,15 @@
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 }
+@media screen and (max-width:360px) {
+  .card h2 {
+    font-size: 75%;
+    height: 1.5rem;
+} 
+}
+@media only screen and (max-width:650px){
+  .card h2 {
+    font-size: 92%;
+    height: 1.8rem;
+} 
+}

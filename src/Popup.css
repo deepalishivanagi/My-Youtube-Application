@@ -25,7 +25,7 @@
     content: 'x';
     cursor: pointer;
     position: fixed;
-    right: calc(32% - 30px);
+    right: calc(34% - 30px);
     top: calc(122vh - 85vh - 33px);
     background: #ededed;
     width: 25px;
@@ -37,3 +37,20 @@
     font-size: 20px;
 }
   
+@media screen and (max-width:360px){
+    .Popup-innerdiv { 
+        width: 66%;
+    }
+    .close-icon {
+        right: calc(24% - 30px);
+    }
+  }
+  
+  @media only screen and (max-width:650px) {
+    .Popup-innerdiv { 
+        width: 64%;
+    }
+    .close-icon {
+        right: calc(22% - 30px);
+    }
+  }
