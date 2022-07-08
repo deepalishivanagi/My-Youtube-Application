@@ -4,7 +4,7 @@
     gap: 10px;
     flex-wrap: wrap;
     margin-top: 14rem;
-    margin-left: 14rem;
+    margin-left: 18rem;
 }
 
 .Liked-main-container {
@@ -15,3 +15,30 @@
     margin-left: 18rem;
     position: fixed;
 }
+
+  @media only screen and (max-width:650px) {
+    #like-heading {
+        margin-top: 9rem;
+        margin-left: 13rem;
+        position: fixed;
+        font-size: 1.5rem;
+    }
+    .Liked-flex-container {
+        margin-top: 14rem;
+        margin-left: 13rem;
+        margin-right: 2rem;
+    }
+  }
+
+  @media screen and (max-width:360px){
+    #like-heading {
+        margin-top: 9rem;
+        margin-left: 8rem;
+        font-size: 1.5rem;
+    }
+    .Liked-flex-container {
+        margin-top: 14rem;
+        margin-left: 10rem;
+        margin-right: 1rem;
+    }
+  }

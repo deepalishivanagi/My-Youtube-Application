@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import './Playlist.css';
 import Sidebar from './Sidebar';
 import { ToastContainer } from 'react-toastify';
+// import playlistTransp from './Images/playlistTransp.jpg';
 
-export default function Playist(){
+export default function Playlist(){
 
     const{PlaylistObject,DeletePlaylistFile}=useContext(FilterContext);
     var PlaylistArray=Object.keys(PlaylistObject);
+
 
     return(
         <div className="Playlist-main-container">
@@ -20,9 +22,14 @@ export default function Playist(){
                                     return(
                                         <div>
                                             <Link to={`/PlaylistFile/${item}`}>
-                                                <div >
-                                                    <h1>{item}</h1>    
-                                                </div>                    
+                                                <div id='Playlist-div'>
+                                                       
+                                                </div>  
+                                                <div id='Playlist-div-section'>
+                                                   <h3>{item}</h3> 
+                                                   <span>{PlaylistObject[item].length}</span>
+                                                   {/* <img src={playlistTransp}></img> */}
+                                                </div>                  
                                             </Link>
                                             <button onClick={()=>{DeletePlaylistFile(item)}}>delete</button>
                                         </div>
