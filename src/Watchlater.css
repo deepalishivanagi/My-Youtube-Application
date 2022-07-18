@@ -6,6 +6,22 @@
     margin-top: 14rem;
     margin-left: 18rem;
 }
+.Watchlater-flex-container a{
+    text-decoration: none;
+    color: black;
+}
+
+#watchlater-delete{
+    background-color: white;
+    height: 7%;
+    width: 20%;
+    border: 1px solid black;
+    box-shadow: 0.1rem 0.2rem 0.4rem 0.1rem black;
+    border-bottom-right-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
 
 .Watchlater-main-container {
     display: flex;
@@ -15,6 +31,7 @@
     margin-top: 9rem;
     margin-left: 18rem;
     position: fixed;
+    text-shadow: 0rem 0.1rem 0.2rem orangered;
 }
 
 @media only screen and (max-width:650px) {

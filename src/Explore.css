@@ -6,7 +6,11 @@
     margin-top: 11rem;
     margin-left: 14rem;
 }
-
+.Explore-flex-container a{
+    text-decoration: none;
+    color: var(--white-off-);
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
 
 
 .Explore-main-container {

@@ -33,7 +33,7 @@ export default function Playist(){
                                             <Link to={`/VideoContainer/${item.id}`}>
                                                  <Card item={item}/>                     
                                             </Link>
-                                            <button onClick={()=>{DeleteVideoFromPlaylist(item.id,file)}}>delete</button>
+                                            <button id="PlaylistFile-delete" onClick={()=>{DeleteVideoFromPlaylist(item.id,file)}}>Delete</button>
                                         </div>
                                     )})
                                 }

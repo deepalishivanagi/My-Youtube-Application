@@ -10,7 +10,7 @@ export const FilterProvider=(props)=>{
 
     const [ShowArray,setShowArray]=useState(StaticDataArray);
     const [isOpen, setIsOpen] = useState(false);
-    const [PlaylistObject,setPlaylist]=useState({One:[1],two:[2]})
+    const [PlaylistObject,setPlaylist]=useState({One:[1],Two:[2]})
  
     function TogglePopup(){
         setIsOpen(!isOpen);

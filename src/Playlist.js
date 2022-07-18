@@ -31,7 +31,7 @@ export default function Playlist(){
                                                    {/* <img src={playlistTransp}></img> */}
                                                 </div>                  
                                             </Link>
-                                            <button onClick={()=>{DeletePlaylistFile(item)}}>delete</button>
+                                            <button id='Playlist-delete' onClick={()=>{DeletePlaylistFile(item)}}>Delete</button>
                                         </div>
                                     )})
                                  }

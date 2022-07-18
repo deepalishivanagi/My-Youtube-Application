@@ -29,15 +29,14 @@ export default function Popup(props)
         <div className="Popup-Outerdiv">
             <div className="Popup-innerdiv">
                 <span className="close-icon" onClick={props.handleClose}>x</span>
-                <h1>Add to Playlist</h1>
-                    <>
+                <h1>Add to Playlist</h1>  
+                
                         {ClickCreate && 
                         <div><input placeholder="Enter playlist name" type="text" value={fileNameIs} onChange={(e)=>{Filename(e)}}></input>
                         <button onClick={()=>{props.AddNewPlaylistHandler(fileNameIs);InputValueHandler()}}>Add</button></div>
-                        }
-                        {PlaylistFiles.map((item)=>{return (<div onClick={()=>{props.addToPlaylist(item,props.Videoid)}}>{item}</div>)})}
+                        }       
+                        {PlaylistFiles.map((item)=>{return (<div className="Popup-container"><button onClick={()=>{props.addToPlaylist(item,props.Videoid)}}>{item}</button></div>)})} 
                         <button onClick={ShowInputBox}>Create a Playlist</button>
-                    </>
                
             </div>
         </div>

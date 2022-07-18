@@ -31,7 +31,7 @@ export default function Watchlater(){
                                             <Link to={`/VideoContainer/${item.id}`}>
                                                 <Card item={item}/>                    
                                             </Link>
-                                            <button onClick={()=>{DeletelFromWatchlater(item.id)}}>delete</button>
+                                            <button id='watchlater-delete' onClick={()=>{DeletelFromWatchlater(item.id)}}>Delete</button>
                                         </div>
                                     )})
                                  }

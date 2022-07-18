@@ -6,6 +6,7 @@
     height: 100vh;
     top: 0;
     left: 0;
+    text-align: center;
 }
 .Popup-innerdiv {
 
@@ -20,6 +21,8 @@
     padding: 20px;
     border: 1px solid #999;
     overflow: auto;
+    background-color: black;
+    color: white;
 }
 .close-icon {
     content: 'x';
@@ -35,6 +38,17 @@
     text-align: center;
     border: 1px solid #999;
     font-size: 20px;
+    color: white;
+    background: black;
+}
+.Popup-container {
+    display: flex;
+    display: block;
+    margin: 0.5rem;
+}
+.Popup-container button{
+    color: white;
+    background-color: black;
 }
   
 @media screen and (max-width:360px){
