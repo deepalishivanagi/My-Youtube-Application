@@ -3,7 +3,7 @@
     justify-content: space-around;
     gap: 10px;
     flex-wrap: wrap;
-    margin-top: 14rem;
+    margin-top: 2rem;
     margin-left: 18rem;
 }
 
@@ -29,7 +29,7 @@
 #PlaylistFile-heading {
     margin-top: 8.5rem;
     margin-left: 18rem;
-    position: fixed;
+    position: inherit;
     text-shadow: 0rem 0.1rem 0.2rem orangered;
 }
 
@@ -38,7 +38,7 @@
     .PlaylistFile-flex-container {
         margin-left: 13rem;
         margin-right: 1rem;
-        margin-top: 16rem;
+        margin-top: 2rem;
     }
     #PlaylistFile-heading  {
         margin-left: 13rem;
@@ -50,7 +50,7 @@
     .PlaylistFile-flex-container {
         margin-left: 10rem;
         margin-right: 1rem;
-        margin-top: 16rem;
+        margin-top: 2rem;
     }
     #PlaylistFile-heading  {
         margin-left: 8rem;

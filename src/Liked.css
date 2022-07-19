@@ -3,7 +3,7 @@
     justify-content: space-around;
     gap: 10px;
     flex-wrap: wrap;
-    margin-top: 14rem;
+    margin-top: 2rem;
     margin-left: 18rem;
 }
 
@@ -17,13 +17,13 @@
 #like-heading {
     margin-top: 10rem;
     margin-left: 18rem;
-    position: fixed;
+    position: inherit;
     text-shadow: 0rem 0.1rem 0.2rem orangered;
 }
 #liked-delete {
     background-color: white;
     height: 7%;
-    width: 28%;
+    width: 30%;
     border: 1px solid black;
     box-shadow: 0.1rem 0.2rem 0.4rem 0.1rem black;
     border-bottom-right-radius: 0.3rem;
@@ -36,11 +36,10 @@
     #like-heading {
         margin-top: 9rem;
         margin-left: 13rem;
-        position: fixed;
         font-size: 1.5rem;
     }
     .Liked-flex-container {
-        margin-top: 14rem;
+        margin-top: 2rem;
         margin-left: 13rem;
         margin-right: 2rem;
     }
@@ -53,7 +52,7 @@
         font-size: 1.5rem;
     }
     .Liked-flex-container {
-        margin-top: 14rem;
+        margin-top: 2rem;
         margin-left: 10rem;
         margin-right: 1rem;
     }

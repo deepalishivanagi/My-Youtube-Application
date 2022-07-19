@@ -3,7 +3,7 @@
     justify-content: space-around;
     gap: 10px;
     flex-wrap: wrap;
-    margin-top: 14rem;
+    margin-top: 2rem;
     margin-left: 18rem;
 }
 .Playlist-flex-container a{
@@ -18,7 +18,7 @@
 #Playlist-heading {
     margin-top: 10rem;
     margin-left: 18rem;
-    position: fixed;
+    position: inherit;
     text-shadow: 0rem 0.1rem 0.2rem orangered;
 }
 #Playlist-div {
@@ -62,7 +62,7 @@
         margin-left: 13rem;
     }
     .Playlist-flex-container {
-        margin-top: 16rem;
+        margin-top: 2rem;
         margin-left: 13rem;
     }
   }
@@ -72,7 +72,7 @@
         margin-left: 8rem;
     }
     .Playlist-flex-container {
-        margin-top: 16rem;
+        margin-top: 2rem;
         margin-left: 10rem;
     }
   }
